@@ -26,7 +26,7 @@ namespace Code
             string b = "123456";
 
             //验证User and password
-            if(a == name || b ==pass)
+            if(a == name && b ==pass)
             {
                 MessageBox.Show("登录成功");
                 Form form_index = new Form1();
