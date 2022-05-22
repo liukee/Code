@@ -22,22 +22,26 @@ namespace Code
             //暂时不使用数据库
             string name = User.Text;
             string pass = passBox2.Text;
-            string a = "刘科";
-            string b = "123456";
+            //string a = "LIUKE";
 
-            //验证User and password
-            if(a == name && b ==pass)
+            //建立字符串数组
+            string[] user_z = { "刘科", "xiaolan", "潘广瑞", "范雯心" };
+            foreach(string user in user_z)
             {
-                MessageBox.Show("登录成功");
-                Form form_index = new Form1();
-                //form_index.Show();//登录窗口可以使用
-                form_index.ShowDialog();
+                //验证User and password
+                string b = "123456";
+                if (user == name && b == pass)//此处待修改！！！
+                {
+                    MessageBox.Show("登录成功");
+                    Form form_index = new Form1();
+                    //form_index.Show();//登录窗口可以使用
+                    form_index.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("输入错误");
+                }
             }
-            else
-            {
-                MessageBox.Show("输入错误");
-            }
-
         }
 
         private void but_2_Click(object sender, EventArgs e)
