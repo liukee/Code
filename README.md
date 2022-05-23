@@ -5,8 +5,9 @@
    if (user == name && b == pass)//此处待修改！！！暂时不使用SQL
                   {
                       MessageBox.Show("登录成功");
-                      Form form_index = new Form1();
-                      //form_index.Show();//登录窗口可以使用
+                      Form form_index = new Form1();//创建实列
+                      //form_index.Show();登录窗口可以使用
+                      this.Hide();//隐藏Login窗口
                       form_index.ShowDialog();
                   }
                   else
